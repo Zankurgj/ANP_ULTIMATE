@@ -2,6 +2,15 @@
 {% extends "app/njk/layout/main.njk" %}
 {% block content %}
 <main class="ulti-main-section">
+    <header class="container-ulti container-ulti--header  ulti-main-header">
+        <div class="ulti-main-logo">
+            <img src="./images/dest/main_logo.png" alt="Логотип Аккумакс">
+        </div>
+        <button class="ulti-main-header-btn">
+            <span class="visually-hidden">корзина</span>
+        </button>
+    </header>
+
     <div class="container-ulti container-ulti--main">
         <div class="ulti-main-inner">
             <p class="ulti-main-subtitle">ПРИ ПОКУПКЕ SKIN ULTIMATE</p>
@@ -71,12 +80,12 @@
                     <div class="ulti-slider-desc-img-block">
                         {% set descriptionItem =[
                         ['desc1', 'защита кожи от воздействия негативных внешних факторов окружающей среды;'],
-                        ['desc2', 'защита от оксидативногостресса и фотостарения: мелких морщин, потери тургора
+                        ['desc2', 'защита от оксидативногостресса и фотостарения: мелких морщин, потери тургора,
                         гиперпигментации и купероза;'],
                         ['desc3','питание, регенерация и поддержания её естественного иммунитета кожи;'],
                         ['desc4', 'поддержание здоровья волос и ногтей;'],
                         ['desc5', 'предотвращение признаков сухости и обезвоженности кожи;'],
-                        ['desc6', 'повышения эластичности кожи, стимуляции выработки гиалуроновой кислоты и
+                        ['desc6', 'повышения эластичности кожи, стимуляции выработки гиалуроновой кислоты и
                         коллагена.']
                         ]%}
                         {% for img, text in descriptionItem %}
@@ -141,11 +150,11 @@
                 ['ing3','<b>Омега+ для кожи</b> содержит омега 3 и масло примулы вечерней, которые питают кожу изнутри,
                 помогая удерживать влагу, поддерживают гладкость кожи и здоровый цвет лица.
                 '],
-                ['ing5','<b>Астаксантин + Биотин</b>
+                ['ing4','<b>Астаксантин + Биотин</b>
                 Выраженно влияет на состояние кожи, улучшая ее тонус и здоровье: разглаживает морщины, повышает
                 эластичность и упругость. Биотин делает волосы шелковистыми, а ногти крепкими.
                 '],
-                ['ing4', '<b>Коэнзим Q10 + Пикногенол</b>
+                ['ing5', '<b>Коэнзим Q10 + Пикногенол</b>
                 Специальные микронутриенты для продления молодости и сияющего цвета лица.']
                 ]%}
                 {% for img, text in slideItem%}
@@ -158,7 +167,7 @@
             </div>
         </div>
     </div>
-    <button class="btn--main btn--ulti-ingredients" onclick="onToogleIngredients()">ВСЕ ИГРЕДИЕНТЫ</button>
+    <button class="btn--main btn--ulti-ingredients" onclick="onToogleIngredients()">ВСЕ ИНГРЕДИЕНТЫ</button>
     <div class="ingredients-pop-up-wrapper" id="aboutPopup">
         <div class="ingredients-pop-up-overlay" onclick="onToogleIngredients()"></div>
         <div class="ingredients-pop-up">

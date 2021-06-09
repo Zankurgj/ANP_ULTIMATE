@@ -192,10 +192,56 @@ body {
       max-width: 250px;
     }
   }
-
+  // HEADER
+  .ulti-main-header {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(-50%);
+    z-index: 10;
+    @media screen and (max-width: 1440px) {
+      top: 50px;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      top: 75px;
+    }
+  }
+  .container-ulti--header {
+    max-width: 1150px;
+  }
+  .ulti-main-logo {
+    img {
+      display: block;
+      width: 190px;
+      height: 88px;
+      @media screen and (max-width: $mobile-bp) {
+        width: 115px;
+        height: 53px;
+      }
+    }
+  }
+  .ulti-main-header-btn {
+    width: 45px;
+    height: 62px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/dest/basket.png");
+    background-color: transparent;
+    border: none;
+    @media screen and (max-width: $mobile-bp) {
+      width: 32px;
+      height: 45px;
+      background-size: contain;
+    }
+  }
   // MAIN SECTION
   .ulti-main-section {
-    padding: 140px 0 60px 0;
+    min-height: 100vh;
+    padding: 190px 0 60px 0;
     background-repeat: no-repeat;
     background-position: center right;
     background-image: url("../images/dest/bg1.png");
@@ -211,6 +257,7 @@ body {
       background-position: center right -300px;
     }
     @media screen and (max-width: $mobile-bp) {
+      min-height: auto;
       padding: 130% 0 60px 0;
       background-image: url("../images/dest/bg1_m.png");
       background-position: top center;
